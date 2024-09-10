@@ -1,0 +1,856 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>
+      Big Brother is Watching
+   </title>
+   <meta name="description" content="Would you survive as an Inner Party member?" />
+   <link id="favicon" rel="icon" href="https://pngimg.com/uploads/eye/eye_PNG35639.png" type="image/x-icon" />
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   <!-- import the webpage's stylesheet -->
+   <link rel="stylesheet" href="style.css" />
+
+   <!-- import the webpage's client-side javascript file -->
+   <script src="script.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         1984 Simulator
+      </h1>
+      <p>
+         Sorry for any errors I may have missed. The code editor doesn't
+         have spellcheck.
+      </p>
+   </header>
+
+   <main>
+      <!-- start -->
+
+      <form id="start">
+         <p>
+            Could you survive a day in Oceania? Click any of the options below to
+            find out.
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="welcome()">
+               I cover my cameras. Big Brother is watching.
+            </option>
+            <option class="dropbtn" onclick="welcome()">
+               I can't cover my cameras. Big Brother is watching
+            </option>
+         </select>
+      </form>
+
+      <!-- welcome -->
+
+      <form id="welcome" class="dropdown-content">
+         <p>
+            Welcome to Oceania.
+         </p>
+         <p>
+            Congratulations, you belong to the Outer Party and work in Ministry of
+            Truth. You have been working diligently today.
+         </p>
+         <p>
+            It's nearly lunch. How will you celebrate?
+         </p>
+         <select size="5">
+            <option class="dropbtn" onclick="dont()">
+               I don't celebrate. Big Brother has already given me more than I
+               need.
+            </option>
+            <option class="dropbtn" onclick="chocolate()">
+               I eat some Victory Chocolate.
+            </option>
+            <option class="dropbtn" onclick="leave2()">
+               I leave early. I deserve it.
+            </option>
+            <option class="dropbtn" onclick="speak()">
+               I make some last-munite historical revisions. What I write may or
+               may not match up with the slips of paper from the message tubes, but
+               it's <i>my</i> job anyway.
+            </option>
+            <option class="dropbtn" onclick="stash()">
+               I stow away some slips of paper from today's revisions. No one can
+               tell what may or may not be in the memory hole.
+            </option>
+         </select>
+      </form>
+
+      <!-- dont -->
+
+      <form id="dont" class="dropdown-content">
+         <p>
+            You proceed to eat the same pinkish-gray stew your co-workers eat.
+            Conversation ran smoothly. Your comrades go on about their children's
+            interest in joining the Spies.
+         </p>
+         <p>
+            The work day has ended.
+         </p>
+         <p>
+            What do you do next?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="community()">
+               I head to the Community Center, as expected by Big Brother.
+            </option>
+            <option class="dropbtn" onclick="communityLeave()">
+               I go to the Community Center and leave promptly after.
+            </option>
+            <option class="dropbtn" onclick="leave()">
+               I don't go to the Community Center.
+            </option>
+         </select>
+      </form>
+
+      <!-- chocolate -->
+
+      <form id="chocolate" class="dropdown-content">
+         <p>
+            You proceed to eat the same pinkish-gray stew your co-workers eat.
+            Conversation ran smoothly. Your comrades go on about their children's
+            interest in joining the Spies.
+         </p>
+         <p>
+            The chocolate tastes like smoky rubbish. How delightful.
+         </p>
+         <p>
+            The work day has ended.
+         </p>
+         <p>
+            What do you do next?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="community3()">
+               I head to the Community Center, as expected by Big Brother.
+            </option>
+            <option class="dropbtn" onclick="communityLeave3()">
+               I go to the Community Center and leave promptly after.
+            </option>
+            <option class="dropbtn" onclick="leave5()">
+               I don't go to the Community Center.
+            </option>
+         </select>
+      </form>
+
+      <!-- leave2 -->
+
+      <form id="leave2" class="dropdown-content">
+         <p>
+            You have left work early.
+         </p>
+         <p>
+            Big Brother is watching.
+         </p>
+         <p>
+            What do you do next?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="back()">
+               I go back, this is scary.
+            </option>
+            <option class="dropbtn" onclick="proles()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+            <option class="dropbtn" onclick="sleep2()">
+               I head home and go to sleep. Today was exhausting.
+            </option>
+         </select>
+      </form>
+
+      <!-- speak -->
+
+      <form id="speak" class="dropdown-content">
+         <p>
+            You say something into the speakwrite. It may not be on the slip of
+            paper Big Brother gave to you, but what does it matter?
+         </p>
+         <p>
+            No one can review your work. The slips of paper were thrown into the
+            memory hole, as instructed by Big Brother.
+         </p>
+         <p>
+            Lunch has passed. What are your plans this afternoon?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="community2()">
+               I go to the Community Center, as expected by Big Brother.
+            </option>
+            <option class="dropbtn" onclick="communityLeave2()">
+               I go to the Community Center, and leave promptly after.
+            </option>
+            <option class="dropbtn" onclick="leave3()">
+               I don't go to the Community Center.
+            </option>
+         </select>
+      </form>
+
+      <!-- stash -->
+
+      <form id="stash" class="dropdown-content">
+         <p>
+            You stow some pieces of paper from the message tube into your pockets.
+         </p>
+         <p>
+            Big Brother will never know.The slips of paper were thrown into the
+            memory hole, as instructed by Big Brother. Big Brother can't look for
+            something that has been destroyed.
+         </p>
+         <p>
+            Lunch has passed. What are your plans this afternoon?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="community4()">
+               I go in the Community Center, as expected by Big Brother.
+            </option>
+            <option class="dropbtn" onclick="communityLeave4()">
+               I go to the Community Center, and leave promptly after.
+            </option>
+            <option class="dropbtn" onclick="leave6()">
+               I don't go to the Community Center.
+            </option>
+         </select>
+      </form>
+
+      <!-- community -->
+
+      <form id="community" class="dropdown-content">
+         <p>
+            Welcome to the Community Center. This is where members of the Inner
+            Party go after work if they have free time.
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="games()">
+               I play games with the comrades.
+            </option>
+            <option class="dropbtn" onclick="lecture()">
+               I attend a lecture.
+            </option>
+         </select>
+      </form>
+
+      <!-- communityLeave -->
+
+      <form id="communityLeave" class="dropdown-content">
+         <p>
+            You go to the Community Center, and leave promptly.
+         </p>
+         <p>
+            Being alone is dangerous, unless you're asleep.
+         </p>
+         <p>
+            What is your next move?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home3()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles2()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- leave -->
+
+      <form id="leave" class="dropdown-content">
+         <p>
+            You decide against going to the Community Center.
+         </p>
+         <p>
+            Being alone is dangerous, unless you're asleep.
+         </p>
+         <p>
+            What is your next move?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home8()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles3()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- community2 -->
+
+      <form id="community2" class="dropdown-content">
+         <p>
+            Welcome to the Community Center. This is where members of the Inner
+            Party go after work if they have free time.
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="games2()">
+               I play games with the comrades.
+            </option>
+            <option class="dropbtn" onclick="lecture2()">
+               I attend a lecture.
+            </option>
+         </select>
+      </form>
+
+      <!-- communityLeave2 -->
+
+      <form id="communityLeave2" class="dropdown-content">
+         <p>
+            You go to the Community Center, and leave promptly.
+         </p>
+         <p>
+            Being alone is dangerous, unless you're asleep.
+         </p>
+         <p>
+            What is your next move?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home2()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles4()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- leave3 -->
+
+      <form id="leave3" class="dropdown-content">
+         <p>
+            You decide against going to the Community Center.
+         </p>
+         <p>
+            Being alone is dangerous, unless you're asleep.
+         </p>
+         <p>
+            What is your next move?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home7()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles5()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- lecture -->
+
+      <form id="lecture" class="dropdown-content">
+         <p>
+            You decide to attend a lecture.
+         </p>
+         <p>
+            Which lecture do you want to go to?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="ogilvy()">
+               I attend a lecture about Comrade Ogilvy.
+            </option>
+            <option class="dropbtn" onclick="goldstein()">
+               I attend a lecture about Emmanuel Goldstein.
+            </option>
+            <option class="dropbtn" onclick="rations()">
+               I attend a lecture about rations.
+            </option>
+         </select>
+      </form>
+
+      <!-- games -->
+
+      <form id="games" class="dropdown-content">
+         <p>
+            You decide to play games with your comrades.
+         </p>
+         <p>
+            The Community Center closes for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles6()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- back -->
+
+      <form id="back" class="dropdown-content">
+         <p>
+            You decided to go back to work out of fear for Big Brother.
+         </p>
+         <p>
+            It was too late. You were caught by the Thought Police and sent to the
+            Ministry of Love.
+         </p>
+         <p>
+            You have gotten the bad ending. Refresh the page to try again.
+         </p>
+      </form>
+
+      <!-- proles -->
+
+      <form id="proles" class="dropdown-content">
+         <p>
+            You head over to the proles' area. You already feel a sense of
+            freedom. You don't want to turn back.
+         </p>
+         <p>
+            What do you do first?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="food()">
+               I go to eat somewhere.
+            </option>
+            <option class="dropbtn" onclick="ticket()">
+               I buy a lottery ticket. I know know you can't win, but this may be
+               the only time I have this oppurtunity.
+            </option>
+         </select>
+      </form>
+
+      <!-- sleep2 -->
+
+      <form id="sleep2" class="dropdown-content">
+         <p>
+            You headed home to sleep before getting attacked by the Spies and sent
+            to the Ministry of Love.
+         </p>
+         <p>
+            You have gotten the bad ending. Refresh the page to try again.
+         </p>
+      </form>
+
+      <!-- lecture2 -->
+
+      <form id="lecture2" class="dropdown-content">
+         <p>
+            You decide to attend a lecture.
+         </p>
+         <p>
+            Which lecture do you want to go to?
+         </p>
+         <select size="3">
+            <option class="dropbtn" onclick="ogilvy()">
+               I attend a lecture about Comrade Ogilvy.
+            </option>
+            <option class="dropbtn" onclick="goldstein2()">
+               I attend a lecture about Emmanuel Goldstein.
+            </option>
+            <option class="dropbtn" onclick="rations2()">
+               I attend a lecture about rations.
+            </option>
+         </select>
+      </form>
+
+      <!-- games2 -->
+
+      <form id="games2" class="dropdown-content">
+         <p>
+            You decide to play games with your comrades.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home9()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles7()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- rations -->
+
+      <form id="rations" class="dropdown-content">
+         <p>
+            You go to a lecture about rations. Nothing new. Just a detailed
+            explaination regarding the new chocolate ration.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home6()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles8()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- ogilvy -->
+
+      <form id="ogilvy" class="dropdown-content">
+         <p>
+            You went to a lecture about Comrade Ogilvy. You don't recall his
+            existence prior to today. You assume you just forgot about him.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home4()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles9()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- goldstein -->
+
+      <form id="goldstein" class="dropdown-content">
+         <p>
+            You went to a lecture about Emmanuel Goldstein, notorious for being an
+            Enemy of the People. Nothing new, really.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home5()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles10()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- rations2 -->
+
+      <form id="rations2" class="dropdown-content">
+         <p>
+            You go to a lecture about rations. Nothing new. Just a detailed
+            explaination regarding the new chocolate ration.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home10()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles11()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- ogilvy2 -->
+
+      <form id="ogilvy2" class="dropdown-content">
+         <p>
+            You went to a lecture about Comrade Ogilvy. You don't recall his
+            existence prior to today. You assume you just forgot about him.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home11()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles12()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- goldstein2 -->
+
+      <form id="goldstein2" class="dropdown-content">
+         <p>
+            You went to a lecture about Emmanuel Goldstein, notorious for being an
+            Enemy of the People. Nothing new, really.
+         </p>
+         <p>
+            The Community Center closed for the day. What are your plans this
+            evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="home12()">
+               I go home. What else is there to do?
+            </option>
+            <option class="dropbtn" onclick="proles13()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- home -->
+
+      <form id="home" class="dropdown-content">
+         <p>
+            You are home.
+         </p>
+         <p>
+            What are your plans this evening?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="sleep()">
+               I go to sleep. Today was exhausting.
+            </option>
+            <option class="dropbtn" onclick="proles14()">
+               I go to the proles' area. They live a more interesting life than I ever
+               will.
+            </option>
+         </select>
+      </form>
+
+      <!-- sleep -->
+
+      <form id="sleep" class="dropdown-content">
+         <p>
+            You slept peacefully. You know this because the physical jerks woke
+            you up.
+         </p>
+         <p>
+            You have gotten the good ending. Refresh the page to try again.
+         </p>
+      </form>
+
+      <!-- home2 -->
+
+      <form id="home2" class="dropdown-content">
+         <p>
+            You decided to head home and got caught by the Thought Police.
+         </p>
+         <p>
+            You were sent to the Ministry of Love.
+         </p>
+         <p>
+            You have gotten the bad ending. Refresh the page to try again.
+         </p>
+      </form>
+
+      <!-- food -->
+
+      <form id="food" class="dropdown-content">
+         <p>
+            You decide to eat at some random pub. The food tastes like something
+            you would at eat the Ministry of Truth. You're not impressed.
+         </p>
+         <p>
+            It's late. There is an old person sitting next to you. What do you do?
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="leave7()">
+               I leave the pub. It's late, and I am tired.
+            </option>
+            <option class="dropbtn" onclick="talk()">
+               I talk to the old person. They seem more interesting than any of my
+               comrades.
+            </option>
+         </select>
+      </form>
+
+      <!-- ticket -->
+
+      <form id="ticket" class="dropdown-content">
+         <p>
+            You enter a lottery ticket.
+         </p>
+         <p>
+            It's getting late.
+         </p>
+         <select size="2">
+            <option class="dropbtn" onclick="leave11()">
+               I head home. I am tired.
+            </option>
+            <option class="dropbtn" onclick="food2()">
+               I go to eat somewhere.
+            </option>
+         </select>
+      </form>
+
+      <!-- talk -->
+
+      <form id="talk" class="dropdown-content">
+         <p>
+            You engage in conversation with the prole at the pub. What do you two
+            talk about?
+         </p>
+         <select size="4">
+            <option class="dropbtn" onclick="life()">
+               I ask the prole about life as a prole.
+            </option>
+            <option class="dropbtn" onclick="memories()">
+               We talk about memories of the past.
+            </option>
+            <option class="dropbtn" onclick="police()">
+               We compare the behaviors of the Thought Police from our respective
+               living areas.
+            </option>
+            <option class="dropbtn" onclick="lottery()">
+               We talk about the lottery.
+            </option>
+         </select>
+      </form>
+
+      <!-- memories -->
+
+      <form id="memories" class="dropdown-content">
+         <p>
+            You talk about memories prior to those of the Party. It helped you
+            confirm your beliefs
+         </p>
+         <p>
+            It's late. The prole still sits at the pub. What do you do?
+         </p>
+         <select size="4">
+            <option class="dropbtn" onclick="leave4()">
+               I leave the pub. It's late, and I am tired.
+            </option>
+            <option class="dropbtn" onclick="life2()">
+               I ask the prole about life as a prole.
+            </option>
+            <option class="dropbtn" onclick="police3()">
+               We compare the behaviors of the Thought Police from our respective
+               living areas.
+            </option>
+            <option class="dropbtn" onclick="lottery4()">
+               We talk about the lottery.
+            </option>
+         </select>
+      </form>
+
+      <!-- life -->
+
+      <form id="life" class="dropdown-content">
+         <p>
+            You learn about life as a prole. You were right. Their lives are far
+            more interesting than yours. They have much more freedoms than you
+            too. The only downside is the poor living conditions.
+         </p>
+         <p>
+            It's late. The prole still sits at the pub. What do you do?
+         </p>
+         <select size="4">
+            <option class="dropbtn" onclick="leave8()">
+               I leave the pub. It's late, and I am tired.
+            </option>
+            <option class="dropbtn" onclick="memories2()">
+               We talk about memories of the past.
+            </option>
+            <option class="dropbtn" onclick="police2()">
+               We compare the behaviors of the Thought Police from our respective
+               living areas.
+            </option>
+            <option class="dropbtn" onclick="lottery2()">
+               We talk about the lottery.
+            </option>
+         </select>
+      </form>
+
+      <!-- police -->
+
+      <form id="police" class="dropdown-content">
+         <p>
+            You two compare the behaviors of the Thought Police from your
+            respective areas. It doesn't surprise you, but the police in the
+            proles' area are less attentive compared to the police in your area.
+         </p>
+         <p>
+            It's late. The prole still sits at the pub. What do you do?
+         </p>
+         <select size="4">
+            <option class="dropbtn" onclick="leave9()">
+               I leave the pub. It's late, and I am tired.
+            </option>
+            <option class="dropbtn" onclick="memories3()">
+               We talk about memories of the past.
+            </option>
+            <option class="dropbtn" onclick="life3()">
+               I ask the prole about life as a prole.
+            </option>
+            <option class="dropbtn" onclick="lottery3()">
+               We talk about the lottery.
+            </option>
+         </select>
+      </form>
+
+      <!-- lottery -->
+
+      <form id="lottery" class="dropdown-content">
+         <p>
+            You two talk about the lottery. The prole has never seen anyone win
+            the lottery.
+         </p>
+         <select size="4">
+            <option class="dropbtn" onclick="leave10()">
+               I leave the pub. It's late, and I am tired.
+            </option>
+            <option class="dropbtn" onclick="memories4()">
+               We talk about memories of the past.
+            </option>
+            <option class="dropbtn" onclick="life4()">
+               I ask the prole about life as a prole.
+            </option>
+            <option class="dropbtn" onclick="police4()">
+               We compare the behaviors of the Thought Police from our respective
+               living areas.
+            </option>
+         </select>
+      </form>
+
+      <!-- leave4 -->
+
+      <form id="leave4" class="dropdown-content">
+         <p>
+            You decided to head home.
+         </p>
+         <p>
+            You were caught by the Spies and sent to the Ministry of Love.
+         </p>
+         <p>
+            You have gotten the bad ending. Refresh the page to try again.
+         </p>
+      </form>
+   </main>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+* {
+   box-sizing: border-box;
+}
+
+a {
+   width: auto;
+   font-size: 20px;
+   font-family: trebuchet ms;
+   color: black;
+   max-width: 600px;
+   transition: 0.3s ease-in-out;
+}
+
+a:hover {
+   color: purple;
+}
+
+body {
+   font-family: bookman, arial, sans-serif;
+   margin: 30px;
+   width: auto;
+   height: auto;
+
+   background-repeat: no-repeat;
+   background-image: url(https://wallpapercave.com/wp/wp3031948.jpg);
+}
+
+.bold {
+   font-weight: bold;
+}
+
+header {
+   text-align: center;
+}
+
+p {
+   width: auto;
+   padding: 20px;
+   font-size: 20px;
+   font-family: trebuchet ms;
+   color: black;
+   max-width: 600px;
+   transition: 0.3s ease-in-out;
+}
+
+p:hover {
+   color: purple;
+}
+
+form {
+   margin-bottom: 25px;
+   padding: 15px;
+   background-color: #7652af;
+   display: inline-block;
+   width: 100%;
+   max-width: 340px;
+   border-radius: 3px;
+}
+
+img {
+   height: 125px;
+   width: 125px;
+}
+
+input {
+   display: block;
+   margin-bottom: 10px;
+   padding: 5px;
+   width: 100%;
+   border: 3px solid #2b03af;
+   border-radius: 3px;
+   font-size: 16px;
+}
+
+button {
+   font-size: 16px;
+   border-radius: 3px;
+   background-color: #b5fff2;
+   border: 2px solid #2b03af;
+   box-shadow: 2px 2px #0099aa;
+   transition: 0.3s ease-in-out;
+}
+
+button:hover {
+   background-color:
+      #e389ff
+}
+
+button:active {
+   box-shadow: none;
+}
+
+li {
+   margin-bottom: 5px;
+}
+
+footer {
+   margin-top: 50px;
+   padding-top: 25px;
+   border-top: 10px dotted #7b45bc;
+}
+
+footer>a {
+   color: #280733;
+}
+
+.nicejob {
+   text-decoration: line-through;
+}
+
+/* style type {}
+
+textcss {} */
+
+* {
+   cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat996.cur), auto !important;
+}
+
+/* style>a href="http://www.cursors-4u.com/cursor/2011/12/29/tiny-star.html" target {} */
+
+/* _blank {
+   title: "Tiny Star"
+}
+
+img src {}
+
+http: //cur.cursors-4u.net/cursor.png" border="0" alt="Tiny Star" style="position:absolute; top: 0px; right: 0px;" /></a>
+< !-- this^ is glitchy but pls ignore it,
+it works and i don't know why(or how to fix it) --> */

@@ -1,0 +1,137 @@
+a {
+   color: black;
+}
+
+body {
+   background-image: url("https://i.redd.it/oues89t2hvj21.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family: helvetica;
+}
+
+button {
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   opacity: 0.75;
+   text-align: center;
+   transition: ease-in-out 0.3s;
+}
+
+button:hover {
+   background-color: lavender;
+   opacity: 1;
+}
+
+.center {
+   margin: auto;
+   width: 50%;
+   padding: 10px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+   background-color: white;
+   border: none;
+   border-radius: 15px;
+   color: black;
+   cursor: pointer;
+   font-align: center;
+   font-size: 16px;
+   padding: 10px;
+   transition: transform 0.3s;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus,
+.dropbtn:active {
+   background-color: lavender;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+   position: relative;
+   display: inline-block;
+   transition: transform 0.3s;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+   display: none;
+   transition: transform 0.5s;
+   z-index: 1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+   display: block;
+}
+
+form {
+   background-color: turquoise;
+   border-radius: 15px;
+   height: auto;
+   padding: 2em;
+   opacity: 0.5;
+   text-shadow: none;
+   transition: ease-in-out 0.3s;
+   width: auto;
+}
+
+form:hover {
+   background-color: lightblue;
+   opacity: 1;
+}
+
+h1,
+h2 {
+   text-align: center;
+   text-shadow: 2px 1px white;
+}
+
+img {
+   border-radius: 25px;
+   display: inline-block;
+   height: auto;
+   margin-bottom: 3em;
+   margin-top: 3em;
+   transition: transform 0.2s;
+   width: auto;
+}
+
+img:hover {
+   transform: scale 1.5;
+}
+
+.image {
+   transform: rotate(90deg);
+}
+
+li {
+   margin-left: 2em;
+}
+
+p {
+   color: black;
+}
+
+textarea {
+   content-align: center;
+   border-radius: 10px;
+   border: none;
+   display: inline-block;
+   margin-bottom: 15px;
+   margin-top: 15px;
+   transition: ease-in-out 0.3s;
+   size: auto;
+}
+
+video,
+video:focus {
+   border-radius: 25px;
+   display: inline-block;
+   width: 200px;
+}

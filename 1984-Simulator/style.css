@@ -1,0 +1,145 @@
+a {
+   color: black;
+}
+
+body {
+   background-image: url("https://i.gifer.com/VOTd.gif");
+   background-position: center;
+   background-repeat: repeat;
+   background-size: auto;
+   font-family: helvetica;
+}
+
+button {
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   opacity: 0.75;
+   text-align: center;
+   transition: ease-in-out 0.3s;
+}
+
+button:hover {
+   background-color: lavender;
+   opacity: 1;
+}
+
+.center {
+   margin: auto;
+   width: 50%;
+   padding: 10px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+   background-color: white;
+   border: none;
+   border-radius: 15px;
+   color: black;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 10px;
+   text-align: center;
+   transition: transform 0.3s;
+}
+
+.dropbtn:hover,
+.dropbtn:focus,
+.dropbtn:active {
+   background-color: lavender;
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+   transition: transform 0.3s;
+}
+
+.dropdown-content {
+   display: none;
+   transition: transform 0.5s;
+   z-index: 1;
+}
+
+form {
+   background-color: turquoise;
+   border-radius: 15px;
+   height: auto;
+   padding: 2em;
+   opacity: 0.5;
+   text-shadow: none;
+   transition: ease-in-out 0.3s;
+   width: auto;
+}
+
+form:hover {
+   background-color: lightblue;
+   opacity: 1;
+}
+
+.hide {
+   display: none;
+}
+
+h1,
+h2 {
+   text-align: center;
+   text-shadow: 2px 1px white;
+}
+
+img {
+   border-radius: 25px;
+   display: inline-block;
+   height: auto;
+   margin-bottom: 3em;
+   margin-top: 3em;
+   transition: transform 0.2s;
+   width: auto;
+}
+
+img:hover {
+   transform: scale 1.5;
+}
+
+.image {
+   transform: rotate(90deg);
+}
+
+li {
+   margin-left: 2em;
+}
+
+p {
+   color: black;
+}
+
+select {
+   border: none;
+   border-radius: 15px;
+   height: auto;
+   text-shadow: none;
+   transition: ease-in-out 0.3s;
+   /* width-animatable: yes; */
+}
+
+.show {
+   display: block;
+}
+
+textarea {
+   border-radius: 10px;
+   border: none;
+   display: inline-block;
+   margin-bottom: 15px;
+   margin-top: 15px;
+   transition: ease-in-out 0.3s;
+   size: auto;
+   text-align: center;
+}
+
+video,
+video:focus {
+   border-radius: 25px;
+   display: inline-block;
+   width: 200px;
+}
